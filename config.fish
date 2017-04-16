@@ -3,11 +3,6 @@ alias python "python3"
 alias pip "pip3"
 alias mars "java /Users/Evan/Mars.jar/"
 
-function setAWSENV
-      set -Ux AWS_ACCESS_KEY_ID AKIAJX4RPDJT6AZ6XCFA
-      set -Ux AWS_SECRET_ACCESS_KEY wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-end 
-
 set -gx PATH /opt/metasploit-framework/bin $PATH
 alias selfie "/Users/Evan/selfie/selfie"
 alias setoolkit "sudo /Users/Evan/set/setoolkit"
