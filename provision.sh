@@ -3,6 +3,7 @@
 echo "Welcome to evanextreme/configurations! This script automatically configures all enviornments in the configurations directory, replacing your current ones."
 echo "All your current .*rc files and enviornments will be moved to the ~/oldenv directory before being overwritten. Now..."
 echo "OK~ Let's configure some \033[0;31mEXTREME\033[0m enviornments!"
+git pull
 mkdir ~/oldenv
 cd ./enviornments
 echo "Configure \033[0;34mvim\033[0m enviornment? [\033[0;32mY\033[0m,\033[0;31mn\033[0m]"
@@ -20,6 +21,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
 else
     echo "Ok sounds good my dude ¯\_(ツ)_/¯"
 fi
+
 echo "Configure \033[0;34mzsh\033[0m enviornment? [\033[0;32mY\033[0m,\033[0;31mn\033[0m]"
 read input
 if [[ $input == "Y" || $input == "y" ]]; then
