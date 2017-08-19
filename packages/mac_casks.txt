@@ -1,0 +1,12 @@
+1password
+angry-ip-scanner
+discord
+docker
+duet
+google-chrome
+istat-menus
+keybase
+slack
+spotify
+textual
+wireshark
