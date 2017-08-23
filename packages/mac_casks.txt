@@ -1,5 +1,6 @@
 1password
 angry-ip-scanner
+caffeine
 discord
 docker
 duet
