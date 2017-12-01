@@ -1,11 +1,8 @@
 #!/bin/bash
 
-echo
-whoami | figlet | lolcat
-
 neofetch
 
-curl http://wttr.in/?0
+curl http://wttr.in/pittsford?0
 
 echo
 

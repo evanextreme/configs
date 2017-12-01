@@ -42,6 +42,7 @@ cryptol
 cryptopp
 cscope
 dbus
+debianutils
 dialog
 dirmngr
 docker
@@ -50,7 +51,9 @@ doctl
 doitlive
 dos2unix
 dpkg
+elixir
 emacs
+erlang
 faac
 fdk-aac
 fdupes
@@ -75,7 +78,9 @@ gflags
 ghc
 git
 git-crypt
+git-flow
 git-lfs
+git-standup
 git-town
 gitless
 glib
@@ -115,10 +120,12 @@ jenkins
 jenkins-job-builder
 john
 jpeg
+jq
 jrnl
 json-c
 jsoncpp
 kubernetes-cli
+kubernetes-helm
 lame
 lastpass-cli
 libassuan
@@ -157,6 +164,7 @@ little-cms2
 lolcat
 lua
 luajit
+lynis
 lzlib
 lzo
 macvim
@@ -185,6 +193,7 @@ ngrep
 nmap
 node
 npth
+oniguruma
 openssl
 openssl@1.1
 openvpn
@@ -211,6 +220,7 @@ python3
 r
 ranger
 readline
+redis
 ruby
 ruby-build
 ruby-install
@@ -220,7 +230,9 @@ rust
 sane-backends
 screenfetch
 screenresolution
+sendemail
 shared-mime-info
+shpotify
 siege
 sl
 slackcat
@@ -259,6 +271,7 @@ webp
 wget
 wireshark
 wrk-trello
+wxmac
 x11vnc
 x264
 xvid
