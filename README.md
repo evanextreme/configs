@@ -11,7 +11,9 @@ More specs soon
 ```
 ### EHirshLaptop
 ```
-MacBook Pro (Retina, 15-inch, Late 2013)
-Processor: 2GHz Intel Core i7
-Memory: 8 GB 1600 MHz DDR3
+MacBook Pro (15-inch, Mid 2017, Touchbar)
+Processor: 2.8GHz Intel Core i7
+Memory: 16 GB 2133 MHz LPDDR3
+Graphics: Radeon Pro 555 2048 MB
+          Intel HD Graphics 630 1536 MB
 ```
