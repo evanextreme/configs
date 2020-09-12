@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-source /Users/evan/antigen.zsh
+source $PROFILE/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
