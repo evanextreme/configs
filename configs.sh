@@ -1,7 +1,3 @@
-#!/bin/bash
-
-cd ~/
-
 # install homebrew
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 
