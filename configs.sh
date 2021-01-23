@@ -3,8 +3,8 @@
 # install homebrew
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 
-echo 'eval \$(${HOMEBREW_PREFIX}/bin/brew shellenv)' >> ${shell_profile}
-eval \$(${HOMEBREW_PREFIX}/bin/brew shellenv)
+echo 'eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)' >> ${shell_profile}
+eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
 
 source ${shell_profile}
 
