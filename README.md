@@ -4,4 +4,4 @@ These are my personal configuration files and package lists for my machines. Fee
 
 ## Installation
 
-`/bin/bash -c "\$(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/configs.sh)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/configs.sh)"`
