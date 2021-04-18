@@ -1,0 +1,12 @@
+1password-cli  dash adobe-creative-cloud  discord  keka  notion  rescuetime  
+tower alfred  docker  keybase  nova  rocket  transmission
+altserver  dolphin unclack
+anaconda  dotnet-sdk  librecad  obs  setapp  virtualbox
+angry-ip-scanner  duet  macvim  oversight  signal  visual-studio  
+metasploit  paintbrush  sketch visual-studio-code microsoft-edge  parallels
+audio-hijack  handbrake  penc  slack  wireshark
+basictex  microsoft-teams  phantomjs  sonos  workbench
+stat-menus  minecraft  plex  setapp  xquartz
+bettertouchtool  itch  minikube soundflower
+caffeine  iterm2  postman  spotify
+caprine  java  mono-mdk-for-visual-studio  powershell  steam
