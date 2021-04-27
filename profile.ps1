@@ -1,8 +1,10 @@
-Import-Module -Name posh-git
 Import-Module oh-my-posh
 Import-Module -Name Terminal-Icons
-Set-Theme Powerlevel10k-Lean
+Set-PoshPrompt -Theme powerlevel10k_modern
 $DefaultUser = 'evhirsh'
+$msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+
+Set-Alias -Name msbuild -Value $msbuild -Option AllScope
 
 # Keys for anywhere
 function Get-CD { Set-Location $args[0]; Get-LS }
@@ -10,9 +12,6 @@ Set-Alias -Name cd -Value Get-CD -Option AllScope
 
 function Get-LS { Get-ChildItem -Path $args[0] -Force | Format-Wide -AutoSize }
 Set-Alias -Name ls -Value Get-LS -Option AllScope
-
-function Run-GitStatus { git status $args[0] }
-Set-Alias -Name gs -Value Run-GitStatus -Option AllScope
 
 function Get-E { explorer $args[0] }
 Set-Alias -Name e -Value Get-E -Option AllScope
@@ -30,9 +29,8 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-# Autosuggestion for commands upon typing
-set-psreadlineoption -predictionsource history
-get-psreadlineoption | % predictionsource
-
 # Alias open
 New-Alias open ii
+
+set-psreadlineoption -predictionsource history
+get-psreadlineoption | % predictionsource
