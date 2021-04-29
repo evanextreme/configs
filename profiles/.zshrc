@@ -90,13 +90,21 @@ source $ZSH/oh-my-zsh.sh
 
 # Path to your oh-my-zsh installation.
 source <(antibody init)
-source ~/aliases.zsh
-source ~/.local.zsh
+
+declare -a locals=("~/.aliases.zsh" "~/.local.zsh")
+
+for local in "${locals[@]}"
+do
+  if test -f "$local"; then
+    source $local
+  fi
+done
+
 
 # Load the oh-my-zsh's library.
 
 
-antibody bundle < ~/.zsh_plugins.txt
+antibody bundle < ~/.zshplugins
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
