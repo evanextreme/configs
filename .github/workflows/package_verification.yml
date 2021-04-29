@@ -1,14 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Package verification
+name: macOS Packages
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
     - cron:  '0 0 * * SUN'
 
@@ -31,6 +31,6 @@ jobs:
       - name: Install Homebrew
         run: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
       - name: Install Homebrew Formulae
-        run: brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/packages/brew_formulae.txt)
+        run: brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_formulae.txt)
       - name: Install Homebrew Casks
-        run: brew install --cask $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/packages/brew_casks.txt)
+        run: brew install --cask $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_casks.txt)
