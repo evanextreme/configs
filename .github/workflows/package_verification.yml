@@ -31,6 +31,6 @@ jobs:
       - name: Install Homebrew
         run: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
       - name: Install Homebrew Formulae
-        run: brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/packages/brew_formulae.txt)
+        run: brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_formulae.txt)
       - name: Install Homebrew Casks
-        run: brew install --cask $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/master/packages/brew_casks.txt)
+        run: brew install --cask $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_casks.txt)
