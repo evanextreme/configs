@@ -30,6 +30,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install Homebrew
         run: echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: Add Taps
+        run: brew tap $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_taps.txt)
       - name: Install Homebrew Formulae
         run: brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_formulae.txt)
       - name: Install Homebrew Casks
