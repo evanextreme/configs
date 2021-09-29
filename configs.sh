@@ -48,7 +48,7 @@ fi
 
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.zshrc > ~/.zshrc
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.p10k.zsh > ~/.p10k.zsh
-curl -L https://github.com/evanextreme/configs/blob/master/packages/zsh_plugins.txt > ~/.zshplugins
+curl -L https://raw.githubusercontent.com/evanextreme/configs/main/packages/zsh_plugins.txt > ~/.zshplugins
 
 # Install homebrew packages
 
