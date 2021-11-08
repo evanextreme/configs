@@ -28,7 +28,8 @@ if [ $(which brew) = "brew not found" ]
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install zsh
-    chsh -s $(which zsh)
+    zsh
+    source ~/.zshrc
 fi
 
 # install latest zsh, set shell to it
@@ -37,6 +38,7 @@ fi
 # install Oh My Zsh
 if test -f "~/.oh-my-zsh/"; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 fi
 
 # install antigen
@@ -84,7 +86,7 @@ fi
 # Install Powershell configs
 display_status "Installing powershell configs..."
 pwsh -c "$(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/configs.ps1)" 
-curl -L https://github.com/evanextreme/configs/blob/master/profiles/.oh-my-posh.omp.json > ~/.oh-my-posh.omp.json
+curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.oh-my-posh.omp.json > ~/.oh-my-posh.omp.json
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/profile.ps1 > ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 
 # Install Awesome Vimrc Configs
