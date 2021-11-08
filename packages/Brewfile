@@ -1,0 +1,52 @@
+tap "cantino/mcfly"
+tap "cloudflare/cloudflare"
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+# install essential command line tools
+
+brew "angle-grinder"
+brew "antibody"
+brew "bat"
+brew "curlie"
+brew "dog"
+brew "duf"
+brew "gcc"
+brew "gcc@5"
+brew "gdb"
+brew "git"
+brew "git-delta"
+brew "glances"
+brew "gping"
+brew "helm"
+brew "httpie"
+brew "kubernetes-cli"
+brew "lsd"
+brew "npm"
+brew "node"
+brew "stern"
+brew "tldr"
+brew "whalebrew"
+brew "zsh"
+brew "cantino/mcfly/mcfly"
+
+# Set cask args
+cask_args appdir: "~/Applications", require_sha: true
+
+# Install essential Casks
+
+cask "alfred"
+cask "dash"
+cask "docker"
+cask "rescuetime"
+cask "powershell"
+cask "setapp"
+cask "transmission"
+cask "unclack"
+cask "virtualbox"
+cask "visual-studio-code"
+cask "wireshark"
+
+# Install essential Mac App Store apps
+
+mas "1Password", id: 443987910
