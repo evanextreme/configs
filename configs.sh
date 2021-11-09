@@ -25,7 +25,7 @@ display_status "Starting configuration of ${machine} machine"
 # install homebrew
 if ! command -v brew >/dev/null; then
     display_status "Installing homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 
