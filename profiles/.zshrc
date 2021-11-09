@@ -91,13 +91,11 @@ source $ZSH/oh-my-zsh.sh
 # Path to your oh-my-zsh installation.
 source <(antibody init)
 
-declare -a locals=("~/.aliases.zsh" "~/.local.zsh")
+declare -a locals=("~/.aliases.sh" "~/.local.zsh")
 
 for local in "${locals[@]}"
 do
-  if test -f "$local"; then
     source $local
-  fi
 done
 
 
