@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 
 
@@ -23,46 +23,35 @@ function display_status () {
 display_status "Starting configuration of ${machine} machine"
 
 # install homebrew
-
-if [ $(which brew) = "brew not found" ]
-then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install zsh
-    zsh
+if ! command -v brew >/dev/null; then
+    display_status "Installing homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
 
 # install latest zsh, set shell to it
 
+
 # install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-
-# install antigen
-if test -f "~/antigen.zsh"; then
-    curl -L git.io/antigen > ~/antigen.zsh
+if ! command -v zsh >/dev/null; then
+    display_status "Installing Oh My Zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 # download personal zsh configs
 
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.zshrc > ~/.zshrc
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.p10k.zsh > ~/.p10k.zsh
-curl -L https://raw.githubusercontent.com/evanextreme/configs/main/packages/zsh_plugins.txt > ~/.zshplugins
 
-source ~/.zshrc
 
 # Install homebrew packages
 
 display_status "Installing homebrew packages..."
-brew tap $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_taps.txt)
-brew install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_formulae.txt)
+curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/Brewfile > Brewfile
+brew bundle
 
 # if macOS
 if [ $machine = "macOS" ]; then
-    display_status "Installing homebrew casks..."
-    brew install --cask $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/brew_casks.txt)
-
-    display_status "Installing mac app store apps..."
-    mas install $(curl -fsSL https://raw.githubusercontent.com/evanextreme/configs/main/packages/mac_app_store.txt)
 
     display_status "Downloading iTerm2 profile..."
     # Configure iTerm2 profile
@@ -88,11 +77,8 @@ curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.oh-
 curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/profile.ps1 > ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 
 # Install Awesome Vimrc Configs
-if test -f "~/.vim_runtime"; then
-    git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-    sh ~/.vim_runtime/install_awesome_vimrc.sh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 
-# set up git lg alias
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+# set up git aliases
+curl -L https://raw.githubusercontent.com/evanextreme/configs/main/profiles/.vimrc > ~/.vimrc
