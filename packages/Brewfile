@@ -1,55 +1,170 @@
+tap "blacktop/tap"
 tap "cantino/mcfly"
 tap "cloudflare/cloudflare"
+tap "homebrew/autoupdate"
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
-
-# install essential command line tools
-
 brew "angle-grinder"
 brew "antibody"
 brew "bat"
 brew "curlie"
+brew "docker", link: false
 brew "dog"
 brew "duf"
+brew "figlet"
 brew "gcc"
-brew "gcc@5"
-brew "gdb"
+brew "gh"
 brew "git"
 brew "git-delta"
+brew "git-lfs"
 brew "glances"
+brew "python@3.9"
+brew "gnupg"
 brew "gping"
 brew "helm"
 brew "httpie"
 brew "kubernetes-cli"
+brew "lolcat"
 brew "lsd"
-brew "npm"
+brew "mas"
+brew "minikube"
+brew "nmap"
 brew "node"
+brew "php"
+brew "pinentry-mac"
+brew "qemu"
+brew "podman"
+brew "speedtest-cli"
 brew "stern"
+brew "terminal-notifier"
+brew "theharvester"
 brew "tldr"
 brew "whalebrew"
 brew "zsh"
+brew "blacktop/tap/lporg"
 brew "cantino/mcfly/mcfly"
-
-# Set cask args
-cask_args appdir: "~/Applications", require_sha: true
-
-# Install essential Casks
-
-cask "alfred"
-cask "dash"
-cask "docker"
-cask "microsoft-edge"
-cask "nova"
-cask "rescuetime"
-cask "powershell"
-cask "setapp"
+cask "alfred", args: { appdir: "~/Applications" }
+cask "calibre"
+cask "dash", args: { appdir: "~/Applications" }
+cask "discord"
+cask "discord-canary"
+cask "discord-ptb"
+cask "docker", args: { appdir: "~/Applications" }
+cask "epic-games"
+cask "evernote"
+cask "final-fantasy-xiv-online"
+cask "gb-studio"
+cask "handbrake"
+cask "imazing"
+cask "keyboard-cleaner"
+cask "launchpad-manager"
+cask "league-of-legends"
+cask "macupdater"
+cask "metasploit"
+cask "microsoft-auto-update"
+cask "microsoft-edge", args: { appdir: "~/Applications" }
+cask "mono-mdk-for-visual-studio"
+cask "notion"
+cask "nova", args: { appdir: "~/Applications" }
+cask "obsidian"
+cask "powershell", args: { appdir: "~/Applications" }
+cask "raspberry-pi-imager"
+cask "secretive"
+cask "setapp", args: { appdir: "~/Applications" }
+cask "signal"
+cask "sony-ps-remote-play"
 cask "spotify"
-cask "transmission"
-cask "unclack"
-cask "virtualbox"
-cask "visual-studio-code"
-cask "wireshark"
-
-# Install essential Mac App Store apps
-
+cask "tableau"
+cask "transmission", args: { appdir: "~/Applications" }
+cask "unclack", args: { appdir: "~/Applications" }
+cask "unity"
+cask "visual-studio"
+cask "visual-studio-code", args: { appdir: "~/Applications" }
+cask "wireshark", args: { appdir: "~/Applications" }
 mas "1Password", id: 443987910
+mas "1Password 7", id: 1333542190
+mas "Adaptivity", id: 1054670022
+mas "Affinity Photo", id: 824183456
+mas "Amphetamine", id: 937984704
+mas "Battery Monitor", id: 836505650
+mas "Bear", id: 1091189122
+mas "BetterSnapTool", id: 417375580
+mas "Broadcasts", id: 1469995354
+mas "Calcbot", id: 931657367
+mas "CleanMyDrive 2", id: 523620159
+mas "Compressor", id: 424390742
+mas "Craft", id: 1487937127
+mas "Crypto Pro", id: 980888073
+mas "Day One", id: 1055511498
+mas "Deliveries", id: 290986013
+mas "DevCleaner", id: 1388020431
+mas "Developer", id: 640199958
+mas "DS Manager", id: 1435876433
+mas "DuckDuckGo Privacy Essentials", id: 1482920575
+mas "Encrypto", id: 935235287
+mas "EV Widget", id: 1541025068
+mas "FANTASIAN", id: 1517339045
+mas "Fantastical", id: 975937182
+mas "Final Cut Pro", id: 424389933
+mas "Flighty", id: 1358823008
+mas "Focus Dashcam Organizer", id: 1476008241
+mas "GarageBand", id: 682658836
+mas "Genki Arcade", id: 1555925018
+mas "Grocery", id: 1195676848
+mas "HomeControl", id: 1547121417
+mas "HomeLog", id: 1584408332
+mas "HomePass", id: 1330266650
+mas "HP Smart", id: 1474276998
+mas "Jayson", id: 1189824719
+mas "Keka", id: 470158793
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "MacFamilyTree 9", id: 1458866808
+mas "Magnet", id: 441258766
+mas "Messenger", id: 1480068668
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft To Do", id: 1274495053
+mas "Microsoft Word", id: 462054704
+mas "Motion", id: 434290957
+mas "Network Radar", id: 507659816
+mas "NextDNS", id: 1464122853
+mas "Noir", id: 1592917505
+mas "Notability", id: 736189492
+mas "Notability", id: 360593530
+mas "Numbers", id: 409203825
+mas "Octane X", id: 1548355081
+mas "OverPicture", id: 1188020834
+mas "Pages", id: 409201541
+mas "Parallels Desktop", id: 1085114709
+mas "PCalc", id: 403504866
+mas "Piggy", id: 1326531921
+mas "Prime Video", id: 545519333
+mas "Remote Desktop", id: 409907375
+mas "Ring", id: 1142753258
+mas "Screens", id: 1224268771
+mas "Sculptura", id: 1377895160
+mas "SmartGym", id: 922744883
+mas "Soro", id: 1550457805
+mas "Space Gremlin", id: 414515628
+mas "Spark", id: 1176895641
+mas "Streaks", id: 963034692
+mas "TeraCopy", id: 1378806557
+mas "TestFlight", id: 899247664
+mas "Textual IRC Client", id: 1262957439
+mas "Things", id: 904280696
+mas "Tot", id: 1491071483
+mas "Transloader", id: 572281534
+mas "Tripsy", id: 1429967544
+mas "Tweetbot", id: 1384080005
+mas "Twitter", id: 1482454543
+mas "Valet Car Control", id: 1438609932
+mas "Wayback Machine", id: 1472432422
+mas "Xcode", id: 497799835
+mas "Zen Pinball Party", id: 1536783591
